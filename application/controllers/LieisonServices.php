@@ -41,6 +41,11 @@ class LieisonServices extends CI_Controller {
         
     }
     
+    public function CopyRight(){
+          $copy = '<button onclick="Lieison();" target="_blank" style="font-size:12px;" class="btn btn-block">Developed By:<b>Lieison Working Together.</b> </button>';
+          echo json_encode(array($copy));
+    }
+    
     
     
 }
