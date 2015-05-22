@@ -11,7 +11,7 @@
  *
  * @author rolandoantonio
  */
-class PluginModel extends CI_Model {
+class Plugin_Model extends CI_Model {
     
     
     

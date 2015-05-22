@@ -9,7 +9,7 @@ class LieisonServices extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-        $this->load->model('PluginModel');
+        $this->load->model('plugin_model');
     }
     
     public function Index(){
