@@ -3,8 +3,8 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 17, 2015 at 09:10 PM
--- Server version: 5.5.23
+-- Generation Time: Jun 12, 2015 at 01:34 AM
+-- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -19,6 +19,54 @@ SET time_zone = "+00:00";
 --
 -- Database: `lieison_webservices`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `chat`
+--
+
+CREATE TABLE IF NOT EXISTS `chat` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_profile` varchar(255) NOT NULL,
+  `message` text NOT NULL,
+  `date` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+
+--
+-- Dumping data for table `chat`
+--
+
+INSERT INTO `chat` (`id`, `id_profile`, `message`, `date`) VALUES
+(4, 'roli2015', 'hola%20como%20estan', '2015-06-12 01:12:00'),
+(5, 'gerson2015', 'hola%20rolando', '2015-06-12 01:15:00'),
+(6, 'roli2015', 'aca%20pues%20tranquilo', '2015-06-12 01:16:00'),
+(7, 'roli2015', 'aca%20pues%20tranquilo', '2015-06-12 01:17:00'),
+(8, 'roli2015', 'aca%20pues%20tranquilo', '2015-06-12 01:18:00'),
+(9, 'roli2015', 'aca pues tranquilo', '2015-06-12 01:19:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `chat_profile`
+--
+
+CREATE TABLE IF NOT EXISTS `chat_profile` (
+  `id_profile` varchar(255) NOT NULL,
+  `name` text NOT NULL,
+  `avatar` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `chat_profile`
+--
+
+INSERT INTO `chat_profile` (`id_profile`, `name`, `avatar`) VALUES
+('roli2015', 'Rolando Arriaza', ''),
+('gerson2015', 'Gerson Aguirre', ''),
+('emerson2015', 'Emerson Sanchez', ''),
+('maya2015', 'Maya Siliezar', '');
 
 -- --------------------------------------------------------
 
