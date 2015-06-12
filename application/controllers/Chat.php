@@ -20,5 +20,11 @@ class Chat  extends CI_Controller{
          echo $request;
     }
     
+    public function getkey($key){
+        $this->output->set_header("Access-Control-Allow-Origin: *");
+        $request = $this->chat_model->getkey($key);
+        echo $request;
+    }
+    
    
 }

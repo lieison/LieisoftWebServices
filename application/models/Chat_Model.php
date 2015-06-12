@@ -36,6 +36,14 @@ class Chat_Model extends CI_Model{
         return $result;
         
     }
+    
+    public function getkey($key){
+        
+        $query = "SELECT COUNT(*) AS 'key' FROM chat_profile "
+                . " WHERE id_profile LIKE '$key'";
+        $result = $this->db->query($query)->result_array();
+        return $result[0]["key"];
+    }
 
 
 }
